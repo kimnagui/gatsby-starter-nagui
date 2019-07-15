@@ -15,7 +15,7 @@ const TagsTemplate = ({ location, pageContext, data }) => {
             activeMenu={category}
         >
             <div>
-                <SEO title={`"${tag}" 관련 글 목록`} />
+                <SEO title={`"${tag}" 관련 글 목록`} keywords={[tag]}/>
 
                 <PostList
                     data={data.allMarkdownRemark.edges}

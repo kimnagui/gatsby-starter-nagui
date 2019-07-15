@@ -4,9 +4,12 @@ const siteConfig = require("./config.js");
 
 module.exports = {
     siteMetadata: {
+        siteUrl: siteConfig.url,
         title: siteConfig.title,
+        lang: siteConfig.lang,
         description: siteConfig.description,
         defaultKeywords: siteConfig.defaultKeywords,
+        defaultMetaImage: siteConfig.defaultMetaImage,
         copyright: siteConfig.copyright,
         authorNickName: siteConfig.authorNickName,
         authorFullName: siteConfig.authorFullName,
