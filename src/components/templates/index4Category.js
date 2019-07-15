@@ -14,7 +14,7 @@ const CategoryList = ({ location, pageContext, data }) => {
             activeMenu={category}
         >
             <div>
-                <SEO title={`"${category}" 관련 글 목록`} />
+                <SEO title={`"${category}" 관련 글 목록`} keywords={[category]}/>
 
                 <PostList
                     data={data.allMarkdownRemark.edges}

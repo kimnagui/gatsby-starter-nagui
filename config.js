@@ -1,7 +1,10 @@
 module.exports = {
+    url: "http://demo.nagui.me",
     title: "Nagui Starter",
-    description: "Gatsby Starter",
+    lang: "ko",
+    description: "Gatsby Starter Nagui",
     defaultKeywords: [`blog`, `gatsby`, `javascript`, `react`, `kimnagui`],
+    defaultMetaImage: "/defaultmetaimage.png",
 
     authorNickName: "KimNagui",
     authorFullName: "KimGwangHyeon",

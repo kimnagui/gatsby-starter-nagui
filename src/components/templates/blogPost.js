@@ -41,7 +41,8 @@ class BlogPost extends React.Component {
             title,
             date,
             category,
-            tags
+            tags,
+            cover
         } = this.props.data.markdownRemark.frontmatter;
         const { recent } = this.props.pageContext;
 
@@ -54,6 +55,7 @@ class BlogPost extends React.Component {
                 <SEO
                     title={title}
                     description={post.excerpt}
+                    image={cover.childImageSharp.fluid.src}
                     keywords={tags || []}
                 />
 
@@ -98,6 +100,13 @@ export const pageQuery = graphql`
                 date(formatString: "YYYY-MM-DD")
                 category
                 tags
+                cover {
+                    childImageSharp {
+                        fluid(maxWidth: 500) {
+                            src
+                        }
+                    }
+                }
             }
         }
     }

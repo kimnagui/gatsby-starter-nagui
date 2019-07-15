@@ -1,24 +1,20 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
     const { site } = useStaticQuery(
         graphql`
             query {
                 site {
                     siteMetadata {
+                        siteUrl
                         title
+                        lang
                         description
                         defaultKeywords
+                        defaultMetaImage
                         authorNickName
                     }
                 }
@@ -27,7 +23,9 @@ function SEO({ description, lang, meta, keywords, title }) {
     );
 
     const metaDescription = description || site.siteMetadata.description;
-    const defaultKeywords = site.siteMetadata.defaultKeywords;
+    const metaImage = site.siteMetadata.siteUrl + (image || site.siteMetadata.defaultMetaImage);
+    const metaLang = site.siteMetadata.lang || 'en';
+
     return (
         <Helmet
             htmlAttributes={{
@@ -36,9 +34,28 @@ function SEO({ description, lang, meta, keywords, title }) {
             title={title}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
             meta={[
+                // HTML
                 {
                     name: `description`,
                     content: metaDescription
+                },
+                // Google
+                {
+                    itemprop: `name`,
+                    content: title
+                },
+                {
+                    itemprop: `description`,
+                    content: metaDescription
+                },
+                {
+                    itemprop: `image`,
+                    content: metaImage
+                },
+                // Facebook
+                {
+                    property: `og:type`,
+                    content: `website`
                 },
                 {
                     property: `og:title`,
@@ -49,16 +66,13 @@ function SEO({ description, lang, meta, keywords, title }) {
                     content: metaDescription
                 },
                 {
-                    property: `og:type`,
-                    content: `website`
+                    property: `og:image`,
+                    content: metaImage
                 },
+                // Twitter
                 {
                     name: `twitter:card`,
                     content: `summary`
-                },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata.authorNickName
                 },
                 {
                     name: `twitter:title`,
@@ -69,14 +83,24 @@ function SEO({ description, lang, meta, keywords, title }) {
                     content: metaDescription
                 },
                 {
+                    name: `twitter:image`,
+                    content: metaImage
+                },
+                {
+                    name: `twitter:creator`,
+                    content: site.siteMetadata.authorNickName
+                },
+                {
                     name: `keywords`,
                     content:
                         keywords.length > 0
-                            ? defaultKeywords.concat(keywords.join(`, `))
-                            : defaultKeywords
+                            ? site.siteMetadata.defaultKeywords.concat(keywords.join(`, `))
+                            : site.siteMetadata.defaultKeywords
                 }
             ].concat(meta)}
-        />
+        >
+            <html lang={metaLang}/>
+        </Helmet>
     );
 }
 
