@@ -10,11 +10,11 @@ const CategoryList = ({ location, pageContext, data }) => {
     return (
         <Layout
             location={location}
-            title={`"${category}" 관련 글 목록`}
+            title={`Category: ${category}`}
             activeMenu={category}
         >
             <div>
-                <SEO title={`"${category}" 관련 글 목록`} keywords={[category]}/>
+                <SEO title={`Category: ${category}`} keywords={[category]}/>
 
                 <PostList
                     data={data.allMarkdownRemark.edges}
