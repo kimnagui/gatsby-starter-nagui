@@ -6,16 +6,14 @@ import PostList from "components/organisms/postList";
 
 const TagsTemplate = ({ location, pageContext, data }) => {
     const tag = pageContext.tag;
-    const category = "";
 
     return (
         <Layout
             location={location}
-            title={`"${tag}" 관련 글 목록`}
-            activeMenu={category}
+            title={`Tag: ${tag}`}
         >
             <div>
-                <SEO title={`"${tag}" 관련 글 목록`} keywords={[tag]}/>
+                <SEO title={`Tag: ${tag}`} keywords={[tag]}/>
 
                 <PostList
                     data={data.allMarkdownRemark.edges}
