@@ -1,0 +1,68 @@
+{
+    "name": "gatsby-starter-nagui",
+    "private": true,
+    "description": "Gatsbyjs Starter",
+    "version": "1.0.0",
+    "author": "Kim Gwang Hyeon <calrosbane@gmail.com>",
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.19",
+        "@fortawesome/free-regular-svg-icons": "^5.8.2",
+        "@fortawesome/free-solid-svg-icons": "^5.9.0",
+        "@fortawesome/react-fontawesome": "^0.1.4",
+        "@material-ui/core": "^3.9.3",
+        "babel-plugin-styled-components": "^1.10.6",
+        "gatsby": "^2.3.3",
+        "gatsby-awesome-pagination": "^0.3.4",
+        "gatsby-image": "^2.0.35",
+        "gatsby-plugin-feed": "^2.1.0",
+        "gatsby-plugin-google-analytics": "^2.0.18",
+        "gatsby-plugin-manifest": "^2.0.25",
+        "gatsby-plugin-offline": "^2.0.25",
+        "gatsby-plugin-react-helmet": "^3.0.11",
+        "gatsby-plugin-s3": "^0.3.1",
+        "gatsby-plugin-sharp": "^2.0.32",
+        "gatsby-plugin-styled-components": "^3.1.0",
+        "gatsby-plugin-typography": "^2.2.10",
+        "gatsby-prismjs-dracula": "^0.1.15",
+        "gatsby-remark-copy-linked-files": "^2.0.11",
+        "gatsby-remark-images": "^2.0.6",
+        "gatsby-remark-prismjs": "^3.3.1",
+        "gatsby-remark-responsive-iframe": "^2.1.1",
+        "gatsby-remark-smartypants": "^2.0.9",
+        "gatsby-source-filesystem": "^2.0.28",
+        "gatsby-transformer-remark": "^2.5.0",
+        "gatsby-transformer-sharp": "^2.1.17",
+        "prismjs": "^1.16.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-helmet": "^5.2.0",
+        "react-onclickoutside": "^6.8.0",
+        "react-typography": "^0.16.19",
+        "styled-components": "^4.3.2",
+        "typography": "^0.16.19",
+        "typography-theme-github": "^0.16.19"
+    },
+    "devDependencies": {
+        "gatsby-plugin-root-import": "^2.0.5",
+        "prettier": "^1.16.4"
+    },
+    "homepage": "https://github.com/kimnagui/gatsby-starter-nagui#readme",
+    "keywords": [
+        "gatsby",
+        "blog",
+        "react",
+        "starter",
+        "kimnagui"
+    ],
+    "license": "MIT",
+    "main": "n/a",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kimnagui/gatsby-starter-nagui.git"
+    },
+    "scripts": {
+        "dev": "gatsby develop",
+        "build": "gatsby build",
+        "deploy": "gatsby-plugin-s3 deploy"
+    }
+}
