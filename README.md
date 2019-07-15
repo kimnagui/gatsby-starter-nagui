@@ -67,3 +67,10 @@ gatsby-browser.js
 gatsby-config.js
 gatsby-node.js
 ```
+
+## Todo
+- Comment
+- Search
+- Bio in post
+- Change font
+- Dark mode
