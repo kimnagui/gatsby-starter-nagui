@@ -9,7 +9,7 @@ export default function HTML(props) {
                     rel="stylesheet"
                     href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
                 />
-                <link rel="shortcut icon" href="/favicon.png"/>
+                <link rel="shortcut icon" href="/favicon.ico"/>
                 <meta charSet="utf-8" />
                 <meta httpEquiv="x-ua-compatible" content="ie=edge" />
                 <meta
