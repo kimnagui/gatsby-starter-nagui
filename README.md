@@ -74,3 +74,4 @@ gatsby-node.js
 - Bio in post
 - Change font
 - Dark mode
+- Design Tag & Category Index
