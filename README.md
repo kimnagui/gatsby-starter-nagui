@@ -1,6 +1,8 @@
 # gatsby-starter-nagui
 
-![](./content/assets/index-pc.png)
+<img src="./content/assets/demo-pc.gif" width="500">
+
+<img src="./content/assets/demo-mobile.gif" height="325">
 
 ## Demo
 
