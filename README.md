@@ -75,3 +75,4 @@ gatsby-node.js
 - Change font
 - Dark mode
 - Design Tag & Category Index
+- emoji
