@@ -23,10 +23,6 @@ const Cover = styled(Link)`
     background-position: 50% 50%;
     border-radius: 10px;
 
-    &:hover {
-        text-decoration: none;
-    }
-
     div {
         display: flex;
         flex-direction: column;
