@@ -7,7 +7,7 @@ import { StaticQuery, graphql, Link } from "gatsby";
 
 const StyledSideHeader = styled.header`
     padding: 20px;
-    font-size: 13px;
+    font-size: 15px;
 `;
 
 const BioContainer = styled.div`
@@ -35,10 +35,6 @@ const BlogTitle = styled(Link)`
     margin-bottom: 0;
     margin-left: 10px;
     font-size: 30px;
-
-    &:hover {
-        text-decoration: none;
-    }
 `;
 
 const SideHeader = () => {
