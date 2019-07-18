@@ -24,7 +24,7 @@ const Cover = styled(Link)`
     border-radius: 10px;
 
     &:hover {
-        text-decoration: none;
+        text-decoration: underline #fff;
     }
 
     div {
