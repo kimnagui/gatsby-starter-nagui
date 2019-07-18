@@ -1,18 +1,11 @@
 import Typography from "typography";
-// import githubTheme from "typography-theme-github";
-// const typography = new Typography(githubTheme);
+import githubTheme from "typography-theme-github";
 
-
-const typography = new Typography({
-	baseFontSize: '16px',
-	baseLineHeight: '1.5',
-	headerFontFamily: ['Nanum Gothic'],
-	bodyFontFamily: ['Noto Sans KR'],
-});
+const typography = new Typography(githubTheme);
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
-	typography.injectStyles();
+    typography.injectStyles();
 }
 
 const { rhythm, scale } = typography;

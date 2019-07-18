@@ -2,12 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import PageButton from "../atoms/pageButton";
 
-const StyledPagination = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+const StyledPagination = styled.nav`
+    margin: 1em auto;
+    text-align: center;
 
-    margin-top: 40px;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0.5em;
+    }
 `;
 
 const Pagination = ({ page, path, listSize }) => {
@@ -49,17 +52,19 @@ const Pagination = ({ page, path, listSize }) => {
 
     return (
         <StyledPagination>
-            {prevList && (
-                <PageButton link={`${path}/${prevList}`}>
-                    <i className="fas fa-chevron-left" />
-                </PageButton>
-            )}
-            {pgs.length > 0 && pgs}
-            {nextList && (
-                <PageButton link={`${path}/${nextList}`}>
-                    <i className="fas fa-chevron-right" />
-                </PageButton>
-            )}
+            <ul>
+                {prevList && (
+                    <PageButton link={`${path}/${prevList}`}>
+                        <i className="fas fa-chevron-left" />
+                    </PageButton>
+                )}
+                {pgs.length > 0 && pgs}
+                {nextList && (
+                    <PageButton link={`${path}/${nextList}`}>
+                        <i className="fas fa-chevron-right" />
+                    </PageButton>
+                )}
+            </ul>
         </StyledPagination>
     );
 };

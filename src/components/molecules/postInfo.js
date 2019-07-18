@@ -7,14 +7,17 @@ const Container = styled.div`
     font-size: ${props => (props.size ? props.size + "px" : "13px")};
     color: ${props => props.color || "#808080"};
 
-    a,
     span {
         color: inherit;
         vertical-align: middle;
     }
 
-    a:hover {
-        text-decoration: underline;
+    a {
+        color: inherit;
+        vertical-align: middle;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     div {

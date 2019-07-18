@@ -1,35 +1,40 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "gatsby";
 
 const StyledLink = styled(Link)`
-    margin: 5px 15px;
+    padding: 0.5em;
+
+    font-weight: bold;
+    color: inherit;
 `;
 
-const StyledButton = styled.div`
-    color: ${props => (props.active ? "#ebb424" : "#000")};
+const StyledButton = styled.li`
+    display: inline-block;
+    border-radius: 3px;
+    margin: 10px;
 
-    font-size: 15px;
-    font-weight: 600;
-
-    vertical-align: middle;
-
-    svg,
-    span {
-        vertical-align: middle;
-        color: #808080;
-    }
+    ${props =>
+        props.active
+            ? css`
+                  color: #fff;
+                  background-color: #3f0f3f;
+              `
+            : css`
+                  color: #808080;
+              `};
 
     &:hover {
-        color: #ebb424;
+        color: #fff;
+        background-color: #3f0f3f;
     }
 `;
 
 export const PageButton = ({ link, children, active }) => {
     return (
-        <StyledLink to={link}>
-            <StyledButton active={active}>{children}</StyledButton>
-        </StyledLink>
+        <StyledButton active={active}>
+            <StyledLink to={link}>{children}</StyledLink>
+        </StyledButton>
     );
 };
 

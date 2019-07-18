@@ -22,6 +22,9 @@ const PostHeader = styled.div`
 const PostContent = styled.div`
     a {
         color: #0687f0;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .gatsby-highlight {
