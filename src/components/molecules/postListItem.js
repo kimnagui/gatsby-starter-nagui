@@ -10,10 +10,6 @@ const StyledLink = styled(Link)`
     justify-content: space-between;
     margin-bottom: 40px;
 
-    &:hover {
-        text-decoration: none;
-    }
-
     #content {
         display: flex;
         flex-direction: column;

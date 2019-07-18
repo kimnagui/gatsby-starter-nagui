@@ -4,10 +4,6 @@ import { Link } from "gatsby";
 
 const StyledLink = styled(Link)`
     margin: 5px 5px 5px 0;
-
-    &:hover {
-        text-decoration: none;
-    }
 `;
 
 const StyledButton = styled.div`
