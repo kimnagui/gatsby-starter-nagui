@@ -72,7 +72,6 @@ gatsby-node.js
 - Comment
 - Search
 - Bio in post
-- Change font
 - Dark mode
 - Design Tag & Category Index
 - emoji

@@ -13,6 +13,10 @@ const Container = styled.div`
         vertical-align: middle;
     }
 
+    a:hover {
+        text-decoration: underline;
+    }
+
     div {
         margin: 0 10px;
     }

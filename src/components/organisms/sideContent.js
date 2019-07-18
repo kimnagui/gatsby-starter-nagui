@@ -32,9 +32,9 @@ const Category = styled(Link)`
     color: ${props => (props.active ? "black" : "white")};
     background-color: ${props => props.active && "#49c39e"};
     text-transform: uppercase;
+    font-weight: bold;
 
     &:hover {
-        text-decoration: none;
         background-color: #49c39e;
         color: black !important;
     }
