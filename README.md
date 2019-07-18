@@ -74,4 +74,3 @@ gatsby-node.js
 - Bio in post
 - Dark mode
 - Design Tag & Category Index
-- emoji

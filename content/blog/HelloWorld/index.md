@@ -7,6 +7,8 @@ tags:
 cover: ./helloworld.png
 ---
 
+:smile:
+
 First post.
 
 Highlight code block.
