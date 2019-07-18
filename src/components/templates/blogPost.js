@@ -20,6 +20,10 @@ const PostHeader = styled.div`
 `;
 
 const PostContent = styled.div`
+    a {
+        color: #0687f0;
+    }
+
     .gatsby-highlight {
         margin: 24px 0;
         border-radius: 10px;
@@ -32,8 +36,8 @@ const PostContent = styled.div`
         margin-left: 0;
         margin-right: 0;
         padding-left: calc(0.8125rem - 1px);
-        border-left: 4px solid hsla(0,0%,0%,0.13);
-        color: hsla(0,0%,0%,0.53);
+        border-left: 4px solid hsla(0, 0%, 0%, 0.13);
+        color: hsla(0, 0%, 0%, 0.53);
     }
 `;
 

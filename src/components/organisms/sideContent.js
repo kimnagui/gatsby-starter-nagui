@@ -29,14 +29,14 @@ const StyledSideContent = styled.nav`
 
 const Category = styled(Link)`
     display: block;
-    color: ${props => (props.active ? "black" : "white")};
+    color: ${props => (props.active ? "#000" : "#fff")};
     background-color: ${props => props.active && "#49c39e"};
     text-transform: uppercase;
     font-weight: bold;
 
     &:hover {
         background-color: #49c39e;
-        color: black !important;
+        color: #000 !important;
     }
 
     i {

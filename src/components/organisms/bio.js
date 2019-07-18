@@ -8,7 +8,7 @@ const Container = styled.div`
     flex-direction: column;
 
     p {
-        color: #2b649e;
+        color: #0687f0;
         font-weight: bold;
     }
 `;
@@ -33,7 +33,7 @@ const BioNameAndPhoto = styled.div`
             font-weight: bold;
         }
         div:last-child {
-            color: gray;
+            color: #808080;
         }
     }
 `;

@@ -32,7 +32,7 @@ const Cover = styled(Link)`
         flex-direction: column;
         justify-content: flex-end;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.6);
         color: #fff;
         padding: 10px;
         border-radius: inherit;

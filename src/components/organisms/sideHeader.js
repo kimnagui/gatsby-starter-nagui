@@ -16,7 +16,7 @@ const BioContainer = styled.div`
 
 const Author = styled.span`
     vertical-align: middle;
-    color: ${props => (props.changeColor ? "#fff" : "gray")};
+    color: ${props => (props.changeColor ? "#fff" : "#808080")};
 
     i {
         padding-left: 5px;
@@ -24,13 +24,13 @@ const Author = styled.span`
 
     &:hover {
         cursor: pointer;
-        color: white;
+        color: #fff;
     }
 `;
 
 const BlogTitle = styled(Link)`
     display: block;
-    color: white;
+    color: #fff;
     font-weight: bold;
     margin-bottom: 0;
     margin-left: 10px;

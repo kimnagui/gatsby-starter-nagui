@@ -7,7 +7,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledButton = styled.div`
-    color: ${props => (props.active ? "#ebb424" : "black")};
+    color: ${props => (props.active ? "#ebb424" : "#000")};
 
     font-size: 15px;
     font-weight: 600;
@@ -17,7 +17,7 @@ const StyledButton = styled.div`
     svg,
     span {
         vertical-align: middle;
-        color: gray;
+        color: #808080;
     }
 
     &:hover {

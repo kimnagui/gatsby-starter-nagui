@@ -9,8 +9,11 @@ const PostList = styled.div`
         margin: 0;
         padding: 0 10px 10px 10px;
 
-        a:hover {
-            text-decoration: underline;
+        a {
+            color: #0687f0;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 `;
