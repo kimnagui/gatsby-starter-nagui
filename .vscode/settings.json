@@ -1,3 +1,8 @@
 {
-    "git.ignoreLimitWarning": true
+  "editor.wordWrap": "on",
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 4,
+  "prettier.tabWidth": 4
 }
