@@ -15,11 +15,15 @@ const BioContainer = styled.div`
 `;
 
 const Author = styled.span`
-    vertical-align: middle;
     color: ${props => (props.changeColor ? "#fff" : "#808080")};
 
     i {
         padding-left: 5px;
+        vertical-align: middle;
+    }
+
+    span {
+        vertical-align: middle;
     }
 
     &:hover {
@@ -53,7 +57,7 @@ const SideHeader = () => {
                                 changeColor={bioOpen}
                             >
                                 <Circle size={"13"} color={"#49c39e"} />
-                                {node.authorNickName}
+                                <span>{node.authorNickName}</span>
                                 <i className="fas fa-chevron-down" />
                             </Author>
                             <ClickPopup
