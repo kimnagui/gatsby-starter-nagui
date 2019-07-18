@@ -35,10 +35,6 @@ const BlogTitle = styled(Link)`
     margin-bottom: 0;
     margin-left: 10px;
     font-size: 30px;
-
-    &:hover {
-        text-decoration: none;
-    }
 `;
 
 const SideHeader = () => {
