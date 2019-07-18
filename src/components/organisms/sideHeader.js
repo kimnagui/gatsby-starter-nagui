@@ -7,7 +7,7 @@ import { StaticQuery, graphql, Link } from "gatsby";
 
 const StyledSideHeader = styled.header`
     padding: 20px;
-    font-size: 13px;
+    font-size: 15px;
 `;
 
 const BioContainer = styled.div`

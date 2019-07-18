@@ -20,8 +20,20 @@ const PostHeader = styled.div`
 `;
 
 const PostContent = styled.div`
-    .gatsby-highlight pre[class*="language-"] {
-        padding: 20px;
+    .gatsby-highlight {
+        margin: 24px 0;
+        border-radius: 10px;
+        pre[class*="language-"] {
+            padding: 10px 15px;
+        }
+    }
+
+    blockquote {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: calc(0.8125rem - 1px);
+        border-left: 4px solid hsla(0,0%,0%,0.13);
+        color: hsla(0,0%,0%,0.53);
     }
 `;
 
