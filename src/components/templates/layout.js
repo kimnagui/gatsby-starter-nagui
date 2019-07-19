@@ -6,8 +6,8 @@ import styled, {
 } from "styled-components";
 import lightTheme from "themes/light";
 import darkTheme from "themes/dark";
-import { local, getItem, setItem } from "utils/storage";
-import ThemeSwitch from "components/molecules/themeSwitch";
+// import { local, getItem, setItem } from "utils/storage";
+// import ThemeSwitch from "components/molecules/themeSwitch";
 import SideHeader from "components/organisms/sideHeader";
 import SideContent from "components/organisms/sideContent";
 import SideFooter from "components/organisms/sideFooter";
@@ -100,7 +100,7 @@ export default class Layout extends React.Component {
         super(props);
         this.state = {
             mobile_side: false,
-            isDarkMode: getItem(local, "isDarkMode") || false
+            isDarkMode: false
         };
     }
 
@@ -108,14 +108,6 @@ export default class Layout extends React.Component {
         const open = !this.state.mobile_side;
         this.setState({
             mobile_side: open
-        });
-    };
-
-    themeToggle = e => {
-        const toggle = !this.state.isDarkMode;
-        setItem(local, "isDarkMode", true);
-        this.setState({
-            isDarkMode: toggle
         });
     };
 
@@ -130,10 +122,10 @@ export default class Layout extends React.Component {
                         <SideHeader />
                         <SideContent activeMenu={activeMenu} />
                         <SideFooter>
-                            <ThemeSwitch
+                            {/* <ThemeSwitch
                                 onChange={this.themeToggle}
                                 checked={isDarkMode}
-                            />
+                            /> */}
                         </SideFooter>
                     </SideBar>
                     <Main>
