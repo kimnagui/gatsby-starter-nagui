@@ -41,7 +41,6 @@ $ gatsbyjs develop
 -   Google Analytics.
 -   Deploy AWS S3.
 -   Emoji.
--   Dark Mode.
 
 ## :open_file_folder: Structure
 
@@ -75,3 +74,4 @@ gatsby-node.js
 -   Search
 -   Bio in post
 -   Design Tag & Category Index
+-   Dark Mode
