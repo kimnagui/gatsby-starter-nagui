@@ -4,6 +4,7 @@ date: "2019-05-02"
 category: "Coffee"
 tags:
     - caffelatte
+    - coffee
 cover: ./caffelatte.png
 ---
 

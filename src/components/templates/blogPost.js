@@ -12,16 +12,26 @@ const PostHeader = styled.div`
         padding: 0;
         margin-bottom: 10px;
         border: none;
+        color: ${props => props.theme.blogpost.title};
     }
 
     hr {
         margin: 20px 0 40px 0;
+        background-color: ${props => props.theme.blogpost.hr};
+    }
+
+    div {
+        color: ${props => props.theme.blogpost.info};
+        #circle {
+            background-color: ${props => props.theme.blogpost.info};
+        }
     }
 `;
 
 const PostContent = styled.div`
+    color: ${props => props.theme.blogpost.content.default};
     a {
-        color: #0687f0;
+        color: ${props => props.theme.blogpost.content.link};
         &:hover {
             text-decoration: underline;
         }
@@ -39,8 +49,8 @@ const PostContent = styled.div`
         margin-left: 0;
         margin-right: 0;
         padding-left: calc(0.8125rem - 1px);
-        border-left: 4px solid hsla(0, 0%, 0%, 0.13);
-        color: hsla(0, 0%, 0%, 0.53);
+        border-left: 4px solid ${props => props.theme.blogpost.content.quote};
+        color: ${props => props.theme.blogpost.content.quote};
     }
 `;
 
@@ -49,6 +59,7 @@ const PostFooter = styled.div`
 
     hr {
         margin: 20px 0;
+        background-color: ${props => props.theme.blogpost.hr};
     }
 `;
 
@@ -74,13 +85,13 @@ class BlogPost extends React.Component {
                 <SEO
                     title={title}
                     description={post.excerpt}
-                    image={cover.childImageSharp.fluid.src}
+                    image={!!cover && cover.childImageSharp.fluid.src}
                     keywords={tags || []}
                 />
 
                 <PostHeader>
                     <h1>{title}</h1>
-                    <PostInfo category={category} date={date} />
+                    <PostInfo category={category} date={date} link={true} />
                     <hr />
                 </PostHeader>
 

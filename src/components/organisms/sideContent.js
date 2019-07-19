@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { StaticQuery, graphql, Link } from "gatsby";
 
 const StyledSideContent = styled.nav`
+    background-color: ${props => props.theme.side.defaultBack};
+
     -ms-overflow-style: none;
     ::-webkit-scrollbar {
         display: none;
@@ -29,14 +31,16 @@ const StyledSideContent = styled.nav`
 
 const Category = styled(Link)`
     display: block;
-    color: ${props => (props.active ? "#000" : "#fff")};
-    background-color: ${props => props.active && "#49c39e"};
+    color: ${props =>
+        props.active ? props.theme.side.category.activeText : "inherit"};
+    background-color: ${props =>
+        props.active && props.theme.side.category.activeBack};
     text-transform: uppercase;
     font-weight: bold;
 
     &:hover {
-        background-color: #49c39e;
-        color: #000 !important;
+        background-color: ${props => props.theme.side.category.activeBack};
+        color: ${props => props.theme.side.category.activeText} !important;
     }
 
     i {

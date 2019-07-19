@@ -4,11 +4,11 @@
 
 <img src="./content/assets/demo-mobile.gif" height="325">
 
-## Demo
+## :computer: Demo
 
 -   <http://demo.nagui.me/>
 
-## Quick Start
+## :rocket: Quick Start
 
 ### 1. Install gatsby-cli
 
@@ -30,19 +30,20 @@ $ gatsbyjs develop
 # open http://localhost:8000
 ```
 
-## Features
+## :star: Features
 
 -   Tags & Categorys.
 -   Pagination.
--   Show Recent Posts for category.
 -   Styled-Components.
 -   Atomic Design Components.
 -   Mobile-First CSS.
 -   Syntax highlighting in code blocks using PrismJS(Dracula).
 -   Google Analytics.
 -   Deploy AWS S3.
+-   Emoji.
+-   Dark Mode.
 
-## Structure
+## :open_file_folder: Structure
 
 ```
 src
@@ -59,7 +60,7 @@ src
  └── html.js
 ```
 
-## Config Files
+## :wrench: Config Files
 
 ```
 config.js
@@ -68,9 +69,9 @@ gatsby-config.js
 gatsby-node.js
 ```
 
-## Todo
-- Comment
-- Search
-- Bio in post
-- Dark mode
-- Design Tag & Category Index
+## :dart: Todo
+
+-   Comment
+-   Search
+-   Bio in post
+-   Design Tag & Category Index

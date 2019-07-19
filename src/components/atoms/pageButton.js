@@ -17,16 +17,17 @@ const StyledButton = styled.li`
     ${props =>
         props.active
             ? css`
-                  color: #fff;
-                  background-color: #3f0f3f;
+                  color: ${props => props.theme.pagination.activeText};
+                  background-color: ${props =>
+                      props.theme.pagination.activeBack};
               `
             : css`
-                  color: #808080;
+                  color: ${props => props.theme.pagination.defaultText};
               `};
 
     &:hover {
-        color: #fff;
-        background-color: #3f0f3f;
+        color: ${props => props.theme.pagination.activeText};
+        background-color: ${props => props.theme.pagination.activeBack};
     }
 `;
 

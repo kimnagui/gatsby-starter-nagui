@@ -3,29 +3,19 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 const StyledLink = styled(Link)`
-    margin: 5px 5px 5px 0;
+    margin: 5px 10px 5px 0;
 `;
 
-const StyledButton = styled.div`
-    display: inline-block;
+const StyledButton = styled.span`
     padding: 5px 10px;
-    border: 2px solid #3f0f3f;
-    border-radius: 15px;
+    border-radius: 5px;
 
-    color: #3f0f3f;
-
+    color: ${props => props.theme.tag.text};
+    background-color: ${props => props.theme.tag.back};
     font-size: 15px;
-    line-height: 15px;
-
-    svg,
-    span {
-        vertical-align: middle;
-        color: #808080;
-    }
 
     &:hover {
-        color: #fff;
-        background-color: #3f0f3f;
+        text-decoration: underline;
     }
 `;
 

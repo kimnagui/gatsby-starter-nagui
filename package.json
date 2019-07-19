@@ -37,6 +37,7 @@
         "react-dom": "^16.8.6",
         "react-helmet": "^5.2.0",
         "react-onclickoutside": "^6.8.0",
+        "react-switch": "^5.0.1",
         "react-typography": "^0.16.19",
         "styled-components": "^4.3.2",
         "typography": "^0.16.19",

@@ -10,7 +10,8 @@ const StyledMainHeader = styled.header`
     z-index: 1;
     display: flex;
 
-    background-color: #3f0f3f;
+    color: ${props => props.theme.main.header.text};
+    background-color: ${props => props.theme.main.header.back};
 
     @media all and (min-width: 992px) {
         display: none;
@@ -24,10 +25,9 @@ const MenuButton = styled.button`
     cursor: pointer;
     overflow: hidden;
     outline: none;
-
     i {
         padding: 12px;
-        color: #fff;
+        color: ${props => props.theme.main.header.button};
     }
 `;
 

@@ -33,7 +33,7 @@ const Cover = styled(Link)`
         justify-content: flex-end;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
-        color: #fff;
+        color: ${props => props.theme.recentpostitem.text};
         padding: 10px;
         border-radius: inherit;
 

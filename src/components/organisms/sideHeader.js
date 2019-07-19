@@ -5,17 +5,43 @@ import Bio from "./bio";
 import ClickPopup from "../atoms/clickPopup";
 import { StaticQuery, graphql, Link } from "gatsby";
 
-const StyledSideHeader = styled.header`
+const Container = styled.header`
     padding: 20px;
     font-size: 15px;
+    background-color: ${props => props.theme.side.defaultBack};
 `;
 
 const BioContainer = styled.div`
     position: relative;
+
+    & > div {
+        width: 240px;
+        border-radius: 6px;
+        padding: 8px;
+        top: 125%;
+        color: ${props => props.theme.bio.defaultText};
+        background-color: ${props => props.theme.bio.defaultBack};
+        &:after {
+            bottom: 99%;
+            left: 25%;
+            margin-left: -5px;
+            border-width: 7px;
+            border-style: solid;
+            border-color: transparent transparent
+                ${props => props.theme.bio.defaultBack} transparent;
+        }
+    }
 `;
 
 const Author = styled.span`
-    color: ${props => (props.changeColor ? "#fff" : "#808080")};
+    color: ${props =>
+        props.changeColor
+            ? props.theme.side.bio.activeText
+            : props.theme.side.bio.defaultText};
+
+    #circle {
+        background-color: ${props => props.theme.side.bio.circle};
+    }
 
     i {
         padding-left: 5px;
@@ -28,13 +54,13 @@ const Author = styled.span`
 
     &:hover {
         cursor: pointer;
-        color: #fff;
+        color: ${props => props.theme.side.bio.activeText};
     }
 `;
 
 const BlogTitle = styled(Link)`
     display: block;
-    color: #fff;
+    color: inherit;
     font-weight: bold;
     margin-bottom: 0;
     margin-left: 10px;
@@ -49,14 +75,14 @@ const SideHeader = () => {
             render={data => {
                 const node = data.site.siteMetadata;
                 return (
-                    <StyledSideHeader>
+                    <Container>
                         <BlogTitle to={"/"}>{node.title}</BlogTitle>
                         <BioContainer>
                             <Author
                                 onClick={() => setBioOpen(true)}
                                 changeColor={bioOpen}
                             >
-                                <Circle size={"13"} color={"#49c39e"} />
+                                <Circle size={"13"} />
                                 <span>{node.authorNickName}</span>
                                 <i className="fas fa-chevron-down" />
                             </Author>
@@ -67,7 +93,7 @@ const SideHeader = () => {
                                 <Bio />
                             </ClickPopup>
                         </BioContainer>
-                    </StyledSideHeader>
+                    </Container>
                 );
             }}
         />

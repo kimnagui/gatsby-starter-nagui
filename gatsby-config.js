@@ -89,7 +89,8 @@ module.exports = {
                 src: `${__dirname}/src`,
                 components: `${__dirname}/src/components`,
                 pages: `${__dirname}/src/pages`,
-                utils: `${__dirname}/src/utils`
+                utils: `${__dirname}/src/utils`,
+                themes: `${__dirname}/src/themes`
             }
         },
         {

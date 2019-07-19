@@ -8,9 +8,10 @@ const PostList = styled.div`
         font-weight: bold;
         margin: 0;
         padding: 0 10px 10px 10px;
+        color: ${props => props.theme.recentpostlist.header};
 
         a {
-            color: #0687f0;
+            color: ${props => props.theme.recentpostlist.category};
             &:hover {
                 text-decoration: underline;
             }

@@ -12,7 +12,7 @@ const StyledText = styled.p`
     height: ${props => props.line * 24 || 24}px;
 
     margin-bottom: 5px;
-    color: ${props => props.color};
+    color: inherit;
 `;
 
 export const TextEllipsis = ({ text, line, color }) => {

@@ -6,10 +6,12 @@ import Image from "gatsby-image";
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    background-color: inherit;
+    color: inherit;
 
     p {
-        color: #0687f0;
-        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 `;
 
@@ -33,7 +35,7 @@ const BioNameAndPhoto = styled.div`
             font-weight: bold;
         }
         div:last-child {
-            color: #808080;
+            color: ${props => props.theme.bio.subText};
         }
     }
 `;
@@ -46,7 +48,7 @@ const BioSocial = styled.div`
         display: block;
         margin-bottom: 5px;
         cursor: pointer;
-        color: #000;
+        color: ${props => props.theme.bio.socialButton};
     }
 
     span {
