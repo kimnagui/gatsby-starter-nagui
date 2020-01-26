@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import onClickOutside from "react-onclickoutside";
 
@@ -8,18 +8,17 @@ const Container = styled.div`
     z-index: 1;
 
     &:after {
-        content: "";
-        position: absolute;
+    content: "";
+    position: absolute;
     }
 `;
 
-const ClickPopup = ({ open, close, children }) => {
-    ClickPopup.handleClickOutside = () => close();
-    return <Container show={open}>{children}</Container>;
-};
+class ClickPopup extends Component {
+    handleClickOutside = e => this.props.close();
+    render() {
+        const { open, children } = this.props;
+        return <Container show={open}>{children}</Container>;
+    }
+}
 
-const clickOutsideConfig = {
-    handleClickOutside: () => ClickPopup.handleClickOutside
-};
-
-export default onClickOutside(ClickPopup, clickOutsideConfig);
+export default onClickOutside(ClickPopup);
